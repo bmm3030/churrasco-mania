@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas - ChurrascoMania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://placehold.co/32x32/E85D04/FFFFFF?text=CM" type="image/png">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" title="Página Inicial ChurrascoMania">
+                <img src="../assets/images/logo.png" alt="Logo ChurrascoMania" class="h-40 w-auto">
+            </a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="receitas.html" class="text-orange-600 font-semibold border-b-2 border-orange-600">Receitas</a>
+                <a href="../tecnicas/index.html" class="text-gray-600 hover:text-orange-600">Técnicas</a>
+                <a href="noticias.html" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="equipamentos.html" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
+                <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    Calculadora
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+            <a href="index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+            <a href="receitas.html" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Receitas</a> <a href="tecnicas.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
+            <a href="noticias.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+            <a href="equipamentos.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+            <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+            <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                Calculadora
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-orange-500 text-white py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold">Receitas para seu Churrasco</h1>
+                <p class="text-lg mt-2">Inspire-se com nossas deliciosas sugestões</p>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="../assets/images/picanha_recheada.jpg" alt="[Imagem de Picanha Invertida]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold my-2">Picanha Invertida Recheada</h3>
+                            <p class="text-gray-600 text-sm mb-4">Uma variação surpreendente e saborosa da picanha tradicional.</p>
+                            <a href="picanha-invertida-recheada.html" class="text-orange-500 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="../assets/images/costelinha_caseira.jpg" alt="[Imagem de Costelinha BBQ]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold my-2">Costelinha Suína ao Molho Barbecue Caseiro</h3>
+                            <p class="text-gray-600 text-sm mb-4">Aprenda a fazer uma costelinha macia que desmancha na boca.</p>
+                            <a href="costelinha-suina-caseira.html" class="text-orange-500 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="../assets/images/frango_atropelado_ervas.jpg" alt="[Imagem de Frango Atropelado]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold my-2">Frango Atropelado com Ervas</h3>
+                            <p class="text-gray-600 text-sm mb-4">Um método simples para um frango assado por igual e muito saboroso.</p>
+                            <a href="frango-atropelado.html" class="text-orange-500 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="../assets/images/pao_de_alho_Caseiro.jpg" alt="[Imagem de Pão de Alho Caseiro]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold my-2">O Melhor Pão de Alho Caseiro</h3>
+                            <p class="text-gray-600 text-sm mb-4">A receita definitiva para o acompanhamento que não pode faltar.</p>
+                            <a href="pao-de-alho-caseiro.html" class="text-orange-500 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+                        </div>
+                    </article>
+                    </div>
+
+                <div class="mt-12 flex justify-center">
+                    <nav class="inline-flex rounded-md shadow">
+                        <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 rounded-l-md">Anterior</a>
+                        <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-orange-500 text-white text-sm font-medium z-10">1</a>
+                        <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">2</a>
+                        <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 rounded-r-md">Próxima</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidade" class="bg-gray-200 py-16">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Gostou das Receitas?</h2>
+                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Receba novas receitas e dicas exclusivas diretamente no seu e-mail!</p>
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Inscreva-se na Newsletter</h3>
+                    <form action="#" method="POST">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
+                    </form>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> ChurrascoMania. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Feito com <span class="text-red-500">&hearts;</span> para amantes de churrasco.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { if (!link.target || link.target !== '_blank') { mobileMenu.classList.add('hidden'); } }); });
+        // Removido o smooth scroll pois não há links internos nesta página específica
+    </script>
+
+</body>
+</html>

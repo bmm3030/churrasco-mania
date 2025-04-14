@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnica: Controle de Temperatura da Brasa - ChurrascoMania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png"> <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Estilos adicionais podem ser colocados aqui, se necessário */
+        .content-section h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #F59E0B; padding-bottom: 0.5rem; } /* Tailwind amber-500 */
+        .content-section h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-section ul, .content-section ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .content-section ul li { list-style: disc; margin-bottom: 0.5rem; }
+        .content-section ol li { list-style: decimal; margin-bottom: 0.75rem; }
+        .content-section p { margin-bottom: 1rem; line-height: 1.6; }
+        .content-section strong { color: #D97706; } /* Tailwind amber-600 */
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" title="Página Inicial ChurrascoMania">
+                <img src="../assets/images/logo.png" alt="Logo ChurrascoMania" class="h-40 w-auto">
+            </a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="receitas.html" class="text-orange-600 font-semibold border-b-2 border-orange-600">Receitas</a>
+                <a href="../tecnicas/index.html" class="text-gray-600 hover:text-orange-600">Técnicas</a>
+                <a href="noticias.html" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="equipamentos.html" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
+                <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    Calculadora
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+            <a href="index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+            <a href="receitas.html" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Receitas</a> <a href="tecnicas.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
+            <a href="noticias.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+            <a href="equipamentos.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+            <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+            <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                Calculadora
+            </a>
+        </div>
+    </header>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+             <a href="../index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+             <a href="../receitas/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Receitas</a>
+             <a href="../tecnicas/" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Técnicas</a> <a href="../noticias/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+             <a href="../equipamentos/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+             <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+             <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                 Calculadora
+             </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-red-900 text-white py-8"> <div class="container mx-auto px-6">
+                 <nav aria-label="Breadcrumb" class="text-sm mb-2">
+                    <ol class="list-none p-0 inline-flex">
+                      <li class="flex items-center">
+                        <a href="../index.html" class="hover:underline">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="../tecnicas/" class="hover:underline">Técnicas</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li>
+                        <span class="text-gray-200">Controle de Temperatura da Brasa</span>
+                      </li>
+                    </ol>
+                  </nav>
+                <h1 class="text-3xl md:text-4xl font-bold">Dominando o Fogo: Controle de Temperatura da Brasa</h1>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="container mx-auto px-6 lg:px-8 bg-white rounded-lg shadow-lg p-8 content-section">
+                <img src="../assets/images/controle_brasa.jpg" alt="[Imagem de Brasa organizada na churrasqueira]" class="w-86 h-auto md:h-56 object-cover rounded-lg mb-8 shadow-md">
+
+                <p>Um dos maiores segredos para um churrasco perfeito não está apenas na carne ou no tempero, mas sim no **controle preciso da temperatura da brasa**. Dominar o fogo permite assar cada tipo de corte no tempo e intensidade corretos, garantindo suculência, sabor e aquela crostinha irresistível.</p>
+
+                <p>Esqueça o "churrascômetro" baseado apenas na intuição. Aprender a identificar e criar diferentes zonas de calor na sua churrasqueira vai elevar seu churrasco a outro nível.</p>
+
+                <h2>Entendendo os Níveis de Calor</h2>
+                <p>Podemos classificar a intensidade da brasa de forma prática:</p>
+                <ul>
+                    <li><strong>Fogo Forte (Intenso):</strong> Ideal para selar carnes rapidamente (como bifes finos ou peças grandes no início) e criar a reação de Maillard (a crostinha saborosa). Você mal consegue manter a mão perto da grelha por 2-3 segundos.</li>
+                    <li><strong>Fogo Médio (Moderado):</strong> Perfeito para a maioria dos cortes, como picanha, contrafilé, linguiças, frango. Permite cozinhar a carne por dentro sem queimar por fora. Você consegue manter a mão perto da grelha por 4-6 segundos.</li>
+                    <li><strong>Fogo Baixo (Brando):</strong> Usado para assados mais longos (costelas, cupim), peças delicadas ou para finalizar o cozimento de carnes mais grossas após selar. Também é ideal para manter os alimentos aquecidos. Você consegue manter a mão perto da grelha por 7-10 segundos.</li>
+                </ul>
+                <p><em>(Teste da mão: Faça com cuidado e rapidez, apenas para ter uma referência inicial. Não se queime!)</em></p>
+
+                <h2>Criando Zonas de Calor (Fogo Direto e Indireto)</h2>
+                <p>A técnica mais fundamental é criar duas zonas principais na sua churrasqueira:</p>
+                <ol>
+                    <li><strong>Zona de Fogo Direto:</strong> Concentre a maior parte da brasa acesa em um lado da churrasqueira (metade ou 2/3 dela). Esta será sua área de calor intenso, usada para selar e dourar.</li>
+                    <li><strong>Zona de Fogo Indireto (ou Zona de Segurança):</strong> Deixe o outro lado da churrasqueira com pouca ou nenhuma brasa diretamente abaixo da grelha. Esta área receberá calor por irradiação e convecção, sendo mais branda. É usada para:
+                        <ul>
+                            <li>Cozinhar peças maiores lentamente após selar.</li>
+                            <li>Assar alimentos delicados (peixes, vegetais).</li>
+                            <li>"Salvar" alguma carne que esteja passando do ponto ou labaredas que subiram.</li>
+                            <li>Manter os alimentos prontos aquecidos.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <img src="https://placehold.co/600x300/ADD8E6/FFFFFF?text=Zonas+de+Calor" alt="[Diagrama simples mostrando fogo direto e indireto]" class="w-full max-w-md mx-auto h-auto object-cover rounded-lg my-6 shadow-md">
+
+                <h2>Gerenciando a Brasa Durante o Churrasco</h2>
+                <ul>
+                    <li><strong>Altura da Grelha:</strong> Se sua churrasqueira permite ajustar a altura, use isso a seu favor. Grelha mais baixa = calor mais forte; grelha mais alta = calor mais brando.</li>
+                    <li><strong>Quantidade de Carvão/Lenha:</strong> Comece com uma boa quantidade para atingir a temperatura desejada. Tenha sempre brasa extra se formando em um canto ou em um acendedor lateral para repor conforme necessário, evitando jogar carvão novo diretamente sobre a brasa ativa (isso gera fumaça e baixa a temperatura).</li>
+                    <li><strong>Ventilação (Entrada e Saída de Ar):</strong> Em churrasqueiras com tampa (como as a bafo ou kamados), controlar as entradas e saídas de ar é crucial para regular a temperatura. Mais ar = fogo mais forte; menos ar = fogo mais brando.</li>
+                    <li><strong>Espalhar ou Juntar a Brasa:</strong> Se precisar diminuir rapidamente o calor em uma área, espalhe um pouco a brasa com um atiçador. Se precisar aumentar, junte-a.</li>
+                    <li><strong>Borrifar Água? (Cuidado!):</strong> Borrifar água diretamente na brasa apaga o fogo e levanta cinzas que podem sujar a carne. Use apenas em último caso para controlar labaredas muito altas causadas por gordura pingando, e faça-o com moderação nas bordas da labareda, não no centro da brasa. É melhor gerenciar a gordura ou mover a carne para a zona indireta.</li>
+                </ul>
+
+                <h2>Dicas Finais</h2>
+                <ul>
+                    <li><strong>Observe a Carne:</strong> Aprenda a "ler" como a carne está reagindo ao calor. A cor, os sucos, a firmeza ao toque dão pistas importantes.</li>
+                    <li><strong>Use um Termômetro:</strong> Para cortes mais grossos ou assados longos, um termômetro de carne é seu melhor amigo para garantir o ponto interno perfeito sem adivinhação.</li>
+                    <li><strong>Paciência é Chave:</strong> Churrasco é sobre controle, não pressa. Deixe a brasa se formar corretamente e a carne cozinhar no seu tempo.</li>
+                    <li><strong>Pratique:</strong> Quanto mais você fizer churrasco, melhor entenderá sua churrasqueira e como o fogo se comporta.</li>
+                </ul>
+
+                <p>Dominar o controle da brasa é uma jornada, mas com essas técnicas e um pouco de prática, você estará no caminho certo para preparar churrascos cada vez mais incríveis!</p>
+
+            </div>
+        </section>
+
+        <section id="comunidade" class="bg-gray-200 py-16">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Quer Mais Segredos do Fogo?</h2>
+                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Inscreva-se para receber dicas avançadas, técnicas de defumação e muito mais sobre o controle da brasa!</p>
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Inscreva-se na Newsletter</h3>
+                    <form action="#" method="POST"> <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
+                    </form>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> ChurrascoMania. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Feito com <span class="text-red-500">&hearts;</span> para amantes de churrasco.</p>
+             <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { if (!link.target || link.target !== '_blank') { mobileMenu.classList.add('hidden'); } }); });
+    </script>
+
+</body>
+</html>

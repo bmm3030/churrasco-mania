@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnica: Identificando o Ponto da Carne - ChurrascoMania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png"> <style>
+        body { font-family: 'Inter', sans-serif; }
+        .content-section h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #F59E0B; padding-bottom: 0.5rem; }
+        .content-section h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-section ul, .content-section ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .content-section ul li { list-style: disc; margin-bottom: 0.5rem; }
+        .content-section ol li { list-style: decimal; margin-bottom: 0.75rem; }
+        .content-section p { margin-bottom: 1rem; line-height: 1.6; }
+        /* CORREÇÃO APLICADA AQUI: Aplica a cor âmbar apenas a 'strong' que NÃO tem classe 'ponto-' */
+        .content-section strong:not([class*="ponto-"]) { color: #D97706; } /* Tailwind amber-600 */
+        /* Cores para os pontos da carne (permanecem as mesmas) */
+        .ponto-selada { color: #DC2626; } /* red-600 */
+        .ponto-malpassada { color: #F87171; } /* red-400 */
+        .ponto-aoponto- { color: #FBBF24; } /* amber-400 */
+        .ponto-aoponto { color: #D97706; } /* amber-600 */
+        .ponto-aoponto+ { color: #9A3412; } /* amber-800 */
+        .ponto-bempassada { color: #78350F; } /* amber-900 */
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+             <a href="../index.html" class="text-2xl font-bold text-orange-600"> Churrasco<span class="text-gray-800">Mania</span>
+             </a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../receitas/" class="text-gray-600 hover:text-orange-600">Receitas</a>
+                <a href="../tecnicas/" class="text-orange-600 font-semibold border-b-2 border-orange-600">Técnicas</a> <a href="../noticias/" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="../equipamentos/" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
+                <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    Calculadora
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+             <a href="../index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+             <a href="../receitas/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Receitas</a>
+             <a href="../tecnicas/" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Técnicas</a> <a href="../noticias/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+             <a href="../equipamentos/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+             <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+             <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                 Calculadora
+             </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-red-900 text-white py-8"> <div class="container mx-auto px-6">
+                 <nav aria-label="Breadcrumb" class="text-sm mb-2">
+                    <ol class="list-none p-0 inline-flex">
+                      <li class="flex items-center">
+                        <a href="../index.html" class="hover:underline">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="../tecnicas/" class="hover:underline">Técnicas</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li>
+                        <span class="text-gray-200">Identificando o Ponto da Carne</span>
+                      </li>
+                    </ol>
+                  </nav>
+                <h1 class="text-3xl md:text-4xl font-bold">A Ciência por Trás do Sabor: Identificando o Ponto da Carne</h1>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="container mx-auto px-6 lg:px-8 bg-white rounded-lg shadow-lg p-8 content-section">
+                <img src="../assets/images/pontos_carne.jpg" alt="[Imagem mostrando fatias de carne em diferentes pontos de cozimento]" class="w-86 h-auto md:h-56 object-cover rounded-lg mb-8 shadow-md">
+
+                <p>Acertar o <strong>ponto da carne</strong> é uma arte que agrada a diferentes paladares e define a experiência do churrasco. Seja mal passado, ao ponto ou bem passado, entender como identificar cada estágio é crucial para entregar o resultado esperado e garantir a máxima suculência e sabor.</p>
+
+                <p>Existem várias maneiras de verificar o ponto, desde técnicas visuais e de toque até o uso preciso de termômetros. Vamos explorar as principais.</p>
+
+                <h2>Os Pontos da Carne Bovina (Referência)</h2>
+                <p>Embora o gosto seja pessoal, estes são os pontos mais comuns para carnes vermelhas, especialmente cortes como picanha, contrafilé, alcatra e filé mignon:</p>
+                <ul>
+                    <li><strong class="ponto-selada">Selada (Blue/Rare):</strong> Apenas selada por fora, com o centro bem vermelho e frio. Temperatura interna: 48-52°C.</li>
+                    <li><strong class="ponto-malpassada">Mal Passada (Rare/Medium-Rare):</strong> Centro vermelho e quente, bordas mais cozidas. Carne macia e muito suculenta. Temperatura interna: 52-57°C.</li>
+                    <li><strong class="ponto-aoponto-">Ao Ponto para Mal (Medium):</strong> Centro rosado e quente, mais firmeza nas bordas. Ainda bastante suculenta. Temperatura interna: 57-63°C.</li>
+                    <li><strong class="ponto-aoponto">Ao Ponto (Medium-Well):</strong> Predominantemente cozida, com apenas um leve tom rosado no centro. Mais firme, menos suculenta. Temperatura interna: 63-68°C.</li>
+                    <li><strong class="ponto-aoponto+">Ao Ponto para Bem (Well-Done):</strong> Quase totalmente cozida, com centro acinzentado/marrom claro. Firme e com pouca suculência. Temperatura interna: 68-72°C.</li>
+                    <li><strong class="ponto-bempassada">Bem Passada (Very Well-Done):</strong> Totalmente cozida, sem nenhum tom rosado. Firme e seca. Temperatura interna: Acima de 72°C.</li>
+                </ul>
+
+                <h2>Método 1: O Termômetro Culinário (Mais Preciso)</h2>
+                <p>Esta é a forma <strong>mais confiável e recomendada</strong>, especialmente para iniciantes ou para cortes mais grossos.</p>
+                <ol>
+                    <li>Insira a ponta do termômetro de leitura instantânea na parte mais espessa da carne, evitando tocar no osso (se houver) ou na gordura excessiva.</li>
+                    <li>Aguarde alguns segundos até a leitura estabilizar.</li>
+                    <li>Compare a temperatura com a tabela de referência acima para determinar o ponto.</li>
+                    <li><strong>Importante:</strong> Lembre-se que a carne continua cozinhando um pouco depois de retirada da grelha (cozimento residual). Retire-a uns 2-3 graus *antes* da temperatura final desejada.</li>
+                </ol>
+                 <img src="https://placehold.co/600x300/B0E0E6/FFFFFF?text=Termômetro+na+Carne" alt="[Ilustração de um termômetro sendo inserido na carne]" class="w-full max-w-md mx-auto h-auto object-cover rounded-lg my-6 shadow-md">
+
+                <h2>Método 2: Teste do Toque (Referência Prática)</h2>
+                <p>Este método compara a firmeza da carne com a firmeza da base do seu polegar ao tocar diferentes dedos. Requer prática para se tornar confiável.</p>
+                <ol>
+                    <li>Relaxe a mão esquerda (ou a mão não dominante).</li>
+                    <li><strong>Mal Passada:</strong> Toque a ponta do dedo indicador com a ponta do polegar. Sinta a maciez da "almofada" na base do polegar. A carne mal passada terá uma firmeza similar.</li>
+                    <li><strong>Ao Ponto para Mal:</strong> Toque a ponta do dedo médio com a ponta do polegar. A base do polegar ficará um pouco mais firme.</li>
+                    <li><strong>Ao Ponto:</strong> Toque a ponta do dedo anelar com a ponta do polegar. A firmeza aumenta.</li>
+                    <li><strong>Bem Passada:</strong> Toque a ponta do dedo mínimo com a ponta do polegar. A base do polegar estará bem firme.</li>
+                </ol>
+                 <img src="https://placehold.co/600x300/AFEEEE/FFFFFF?text=Teste+do+Toque+na+Mão" alt="[Ilustração mostrando o teste do toque na mão para ponto da carne]" class="w-full max-w-md mx-auto h-auto object-cover rounded-lg my-6 shadow-md">
+                <p>Use este método como um guia rápido, mas sempre que possível, confirme com um termômetro, especialmente se estiver cozinhando para outras pessoas.</p>
+
+                <h2>Método 3: Observação Visual e Sucos</h2>
+                <ul>
+                    <li><strong>Cor dos Sucos:</strong> Ao pressionar levemente a carne (ou fazer um pequeno corte discreto, embora não ideal pois perde sucos), observe a cor do líquido que sai. Mal passada terá sucos bem vermelhos; ao ponto terá sucos rosados; bem passada terá sucos claros ou inexistentes.</li>
+                    <li><strong>Cor Interna:</strong> A observação da cor interna ao cortar é a forma final de verificação, mas idealmente você quer acertar antes disso.</li>
+                    <li><strong>Encolhimento:</strong> Carnes bem passadas tendem a encolher mais e parecer mais secas externamente.</li>
+                </ul>
+
+                <h2>Considerações Importantes</h2>
+                <ul>
+                    <li><strong>Tipo de Corte:</strong> Cortes mais finos cozinham muito rápido e são difíceis de acertar em pontos menos passados. Cortes mais grossos exigem mais atenção e, muitas vezes, cozimento indireto após selar.</li>
+                    <li><strong>Descanso da Carne:</strong> Sempre deixe a carne descansar por alguns minutos (5-10 min para bifes, mais para peças maiores) após retirá-la da grelha. Isso permite que os sucos se redistribuam, resultando em uma carne mais macia e saborosa ao cortar.</li>
+                    <li><strong>Preferência Pessoal:</strong> O "ponto perfeito" é subjetivo. Converse com seus convidados sobre suas preferências.</li>
+                </ul>
+
+                <p>Com a combinação de observação, prática do toque e a precisão do termômetro, você logo estará servindo carnes no ponto exato que desejar, elevando a qualidade do seu churrasco!</p>
+
+            </div>
+        </section>
+
+        <section id="comunidade" class="bg-gray-200 py-16">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Quer Acertar o Ponto Sempre?</h2>
+                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Inscreva-se e receba mais dicas sobre temperaturas, tempos de cozimento e segredos para a carne perfeita!</p>
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Inscreva-se na Newsletter</h3>
+                    <form action="#" method="POST"> <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
+                    </form>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> ChurrascoMania. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Feito com <span class="text-red-500">&hearts;</span> para amantes de churrasco.</p>
+             <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { if (!link.target || link.target !== '_blank') { mobileMenu.classList.add('hidden'); } }); });
+    </script>
+
+</body>
+</html>
+

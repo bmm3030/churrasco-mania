@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnica: Marinadas e Temperos Secos (Dry Rubs) - ChurrascoMania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png"> <style>
+        body { font-family: 'Inter', sans-serif; }
+        .content-section h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #F59E0B; padding-bottom: 0.5rem; }
+        .content-section h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .content-section ul, .content-section ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .content-section ul li { list-style: disc; margin-bottom: 0.5rem; }
+        .content-section ol li { list-style: decimal; margin-bottom: 0.75rem; }
+        .content-section p { margin-bottom: 1rem; line-height: 1.6; }
+        .content-section strong { color: #D97706; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+             <a href="../index.html" class="text-2xl font-bold text-orange-600"> Churrasco<span class="text-gray-800">Mania</span>
+             </a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../receitas/" class="text-gray-600 hover:text-orange-600">Receitas</a>
+                <a href="../tecnicas/" class="text-orange-600 font-semibold border-b-2 border-orange-600">Técnicas</a> <a href="../noticias/" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="../equipamentos/" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
+                <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    Calculadora
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+             <a href="../index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+             <a href="../receitas/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Receitas</a>
+             <a href="../tecnicas/" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Técnicas</a> <a href="../noticias/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+             <a href="../equipamentos/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+             <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+             <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                 Calculadora
+             </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-red-900 text-white py-8"> <div class="container mx-auto px-6">
+                 <nav aria-label="Breadcrumb" class="text-sm mb-2">
+                    <ol class="list-none p-0 inline-flex">
+                      <li class="flex items-center">
+                        <a href="../index.html" class="hover:underline">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="../tecnicas/" class="hover:underline">Técnicas</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li>
+                        <span class="text-gray-200">Marinadas e Temperos Secos (Dry Rubs)</span>
+                      </li>
+                    </ol>
+                  </nav>
+                <h1 class="text-3xl md:text-4xl font-bold">Camadas de Sabor: Marinadas e Temperos Secos (Dry Rubs)</h1>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="container mx-auto px-6 lg:px-8 bg-white rounded-lg shadow-lg p-8 content-section">
+                <img src="../assets/images/tempero_churrasco.jpg" alt="[Imagem mostrando carne marinando e outra com dry rub]" class="w-86 h-auto md:h-56 object-cover rounded-lg mb-8 shadow-md">
+
+                <p>Além do sal grosso, que é essencial, adicionar outras camadas de sabor à carne antes de levá-la à grelha pode transformar seu churrasco. Duas técnicas populares para isso são as **marinadas** (líquidas) e os **temperos secos** (dry rubs).</p>
+
+                <p>Cada uma tem sua função e funciona melhor com determinados tipos de carne e objetivos. Entender a diferença e como aplicá-las corretamente é fundamental.</p>
+
+                <h2>Marinadas: Sabor e Umidade</h2>
+                <p>Marinadas são misturas líquidas usadas para infundir sabor e, em alguns casos, amaciar a carne.</p>
+                <h3>Componentes Principais:</h3>
+                <ul>
+                    <li><strong>Ácido:</strong> Ajuda a amaciar levemente as fibras da carne e permite que os sabores penetrem. Exemplos: suco de limão, vinagre, vinho, iogurte. <strong>Cuidado:</strong> Excesso de ácido ou tempo prolongado podem "cozinhar" a carne ou deixá-la com textura pastosa.</li>
+                    <li><strong>Óleo:</strong> Ajuda a distribuir os sabores solúveis em gordura, evita que a carne grude na grelha e contribui para a umidade. Exemplos: azeite, óleo vegetal.</li>
+                    <li><strong>Aromáticos e Temperos:</strong> A base do sabor! Alho, cebola, ervas frescas (alecrim, tomilho, salsa), especiarias (páprica, cominho, pimenta), molhos (shoyu, inglês).</li>
+                    <li><strong>Sal:</strong> Essencial para realçar todos os sabores e ajudar na penetração da marinada.</li>
+                </ul>
+                <h3>Como Usar:</h3>
+                <ol>
+                    <li>Combine todos os ingredientes da marinada.</li>
+                    <li>Coloque a carne e a marinada em um saco plástico tipo zip-lock ou em um recipiente não reativo (vidro, inox). Certifique-se que a carne esteja bem coberta.</li>
+                    <li>Leve à geladeira. O tempo varia conforme a carne e a intensidade desejada:
+                        <ul>
+                            <li>Peixes e frutos do mar: 15-30 minutos (ácido age rápido).</li>
+                            <li>Frango (pedaços): 1 a 4 horas.</li>
+                            <li>Carne suína: 2 a 6 horas.</li>
+                            <li>Carne bovina (cortes mais macios): 2 a 8 horas.</li>
+                            <li>Carne bovina (cortes mais firmes): 6 a 24 horas.</li>
+                        </ul>
+                    </li>
+                    <li>**Importante:** Retire a carne da marinada e **seque-a bem** com papel toalha antes de levar à grelha. O excesso de líquido impede a formação da crosta saborosa (reação de Maillard) e pode causar labaredas.</li>
+                    <li>**Nunca reutilize a marinada** que teve contato com a carne crua como molho, a menos que seja fervida vigorosamente por alguns minutes para eliminar bactérias.</li>
+                </ol>
+                <h3>Ideal Para:</h3>
+                <p>Frango, carne suína, cortes bovinos mais firmes (como fraldinha, maminha), peixes e vegetais.</p>
+
+                <h2>Temperos Secos (Dry Rubs): Crosta e Sabor Superficial</h2>
+                <p>Dry rubs são misturas de temperos secos (ervas, especiarias, sal, açúcar) aplicadas diretamente na superfície da carne.</p>
+                <h3>Componentes Principais:</h3>
+                 <ul>
+                    <li><strong>Base de Sabor:</strong> Páprica (doce, picante ou defumada), alho em pó, cebola em pó, pimenta do reino, cominho.</li>
+                    <li><strong>Ervas Secas:</strong> Orégano, tomilho, alecrim moído.</li>
+                    <li><strong>Sal:</strong> Fundamental para o sabor e para ajudar a criar a crosta.</li>
+                    <li><strong>Açúcar (Opcional):</strong> Açúcar mascavo, demerara ou branco ajudam na caramelização e na formação de uma crosta escura (bark), especialmente em assados longos como costelinhas e brisket. <strong>Cuidado:</strong> Açúcar queima facilmente em fogo alto.</li>
+                    <li><strong>Picância (Opcional):</strong> Pimenta caiena, pimenta calabresa, chilli em pó.</li>
+                </ul>
+                <h3>Como Usar:</h3>
+                 <ol>
+                    <li>Combine todos os ingredientes secos.</li>
+                    <li>Seque bem a superfície da carne com papel toalha.</li>
+                    <li>Aplique o dry rub generosamente sobre toda a superfície da carne, pressionando levemente para aderir. Use as mãos (com luvas, se preferir) para garantir uma cobertura uniforme.</li>
+                    <li>Você pode aplicar o rub imediatamente antes de grelhar ou deixar a carne descansar com o tempero na geladeira por algumas horas (ou de um dia para o outro, especialmente para peças grandes como costela ou brisket) para intensificar o sabor.</li>
+                    <li>Leve a carne diretamente à grelha. O dry rub ajudará a formar uma crosta saborosa durante o cozimento.</li>
+                </ol>
+                 <h3>Ideal Para:</h3>
+                <p>Costelinhas, cupim, brisket (peito bovino), frango inteiro ou pedaços (especialmente se quiser pele crocante), cortes bovinos em geral onde se busca uma boa crosta (picanha, bife ancho, etc.).</p>
+
+                <h2>Marinada vs. Dry Rub: Qual Escolher?</h2>
+                <ul>
+                    <li>Use **marinada** quando quiser adicionar umidade e sabor que penetre um pouco mais na carne, ou para amaciar cortes mais firmes. Ideal para frango e porco.</li>
+                    <li>Use **dry rub** quando o objetivo principal for criar uma crosta saborosa e caramelizada na superfície da carne. Excelente para costelas, brisket e cortes bovinos que já são macios.</li>
+                    <li>**É possível combinar?** Sim! Você pode marinar a carne e, depois de secá-la, aplicar um dry rub leve (principalmente sem sal ou com pouco sal, já que a marinada já salgou) antes de grelhar.</li>
+                </ul>
+
+                <p>Experimente diferentes combinações de ingredientes para criar suas próprias marinadas e dry rubs exclusivos. O importante é entender a função de cada técnica para aplicar a mais adequada a cada tipo de carne e resultado desejado!</p>
+
+            </div>
+        </section>
+
+        <section id="comunidade" class="bg-gray-200 py-16">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Quer Criar Sabores Incríveis?</h2>
+                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Receba receitas de marinadas, dry rubs e dicas para temperar suas carnes como um profissional!</p>
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Inscreva-se na Newsletter</h3>
+                    <form action="#" method="POST"> <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
+                    </form>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> ChurrascoMania. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Feito com <span class="text-red-500">&hearts;</span> para amantes de churrasco.</p>
+             <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { if (!link.target || link.target !== '_blank') { mobileMenu.classList.add('hidden'); } }); });
+    </script>
+
+</body>
+</html>

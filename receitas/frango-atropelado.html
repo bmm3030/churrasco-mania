@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita: Frango Atropelado com Ervas - ChurrascoMania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://placehold.co/32x32/E85D04/FFFFFF?text=CM" type="image/png">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .recipe-content ul, .recipe-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .recipe-content ul li { list-style: disc; margin-bottom: 0.5rem; }
+        .recipe-content ol li { list-style: decimal; margin-bottom: 0.75rem; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" title="Página Inicial ChurrascoMania">
+                <img src="../assets/images/logo.png" alt="Logo ChurrascoMania" class="h-40 w-auto">
+            </a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="receitas.html" class="text-orange-600 font-semibold border-b-2 border-orange-600">Receitas</a> <a href="tecnicas.html" class="text-gray-600 hover:text-orange-600">Técnicas</a>
+                <a href="noticias.html" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="equipamentos.html" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
+                <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    Calculadora
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+            <a href="index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+            <a href="receitas.html" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Receitas</a> <a href="tecnicas.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
+            <a href="noticias.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+            <a href="equipamentos.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+            <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+            <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                Calculadora
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-amber-500 text-white py-8"> <div class="container mx-auto px-6">
+                 <nav aria-label="Breadcrumb" class="text-sm mb-2">
+                    <ol class="list-none p-0 inline-flex">
+                      <li class="flex items-center">
+                        <a href="index.html" class="hover:underline">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="receitas.html" class="hover:underline">Receitas</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                      </li>
+                      <li>
+                        <span class="text-gray-200">Frango Atropelado com Ervas</span>
+                      </li>
+                    </ol>
+                  </nav>
+                <h1 class="text-3xl md:text-4xl font-bold">Frango Atropelado com Ervas</h1>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="container mx-auto px-6 lg:px-8 bg-white rounded-lg shadow-lg p-8 recipe-content">
+                <img src="../assets/images/frango_atropelado_ervas.jpg" alt="[Imagem de Frango Atropelado dourado na grelha]" class="w-86 h-auto md:h-56 object-cover rounded-lg mb-8 shadow-md">
+
+                <p class="text-lg text-gray-700 mb-6">
+                    O "Frango Atropelado" (ou Spatchcock Chicken) é uma técnica simples que garante um frango assado por igual, com pele crocante e carne suculenta. Ao abrir o frango, ele cozinha mais rápido e de maneira uniforme na churrasqueira ou forno. As ervas adicionam um aroma e sabor incríveis!
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4 border-b-2 border-amber-500 pb-2">Ingredientes</h2>
+                        <ul>
+                            <li>1 frango inteiro (aprox. 1.5kg a 1.8kg)</li>
+                            <li>3-4 dentes de alho amassados</li>
+                            <li>1/4 xícara de azeite extra virgem</li>
+                            <li>Suco de 1 limão siciliano (ou tahiti)</li>
+                            <li>2 colheres de sopa de ervas frescas picadas (sugestões: alecrim, tomilho, sálvia, orégano)</li>
+                            <li>1 colher de chá de páprica doce</li>
+                            <li>Sal a gosto</li>
+                            <li>Pimenta do reino moída na hora a gosto</li>
+                            <li>Opcional: Raspas da casca do limão</li>
+                        </ul>
+                        <h3 class="font-semibold text-lg mb-2 mt-4">Você vai precisar:</h3>
+                         <ul>
+                             <li>Tesoura de cozinha resistente ou faca afiada</li>
+                             <li>Churrasqueira com brasa média ou forno</li>
+                             <li>Tábua de corte</li>
+                         </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="text-2xl font-semibold mb-4 border-b-2 border-amber-500 pb-2">Modo de Preparo</h2>
+                        <ol>
+                            <li>
+                                <strong>"Atropelar" o Frango:</strong> Lave e seque bem o frango. Coloque-o com o peito para baixo em uma tábua de corte. Com uma tesoura de cozinha forte ou uma faca afiada, corte ao longo de um lado da coluna vertebral, do pescoço à cauda. Repita o processo do outro lado da coluna para removê-la completamente (guarde a coluna para fazer caldo, se quiser).
+                            </li>
+                            <li>
+                                <strong>Abrir o Frango:</strong> Vire o frango com o peito para cima. Pressione firmemente sobre o osso do peito com a palma das mãos até ouvir um estalo e o frango ficar achatado.
+                            </li>
+                            <li>
+                                <strong>Preparar a Marinada de Ervas:</strong> Em uma tigela pequena, misture o alho amassado, o azeite, o suco de limão, as ervas frescas picadas, a páprica, sal, pimenta do reino e as raspas de limão (se usar).
+                            </li>
+                            <li>
+                                <strong>Temperar o Frango:</strong> Com cuidado, solte a pele do peito e das coxas do frango, sem rasgá-la. Espalhe um pouco da marinada de ervas por baixo da pele, diretamente sobre a carne. Pincele o restante da marinada por toda a superfície do frango (pele e lado dos ossos).
+                            </li>
+                             <li>
+                                <strong>Marinar (Opcional, mas recomendado):</strong> Cubra o frango e deixe marinar na geladeira por pelo menos 30 minutos, ou idealmente por 2 a 4 horas, para absorver bem os sabores.
+                            </li>
+                            <li>
+                                <strong>Preparar a Churrasqueira/Forno:</strong> Prepare a churrasqueira para fogo médio indireto (brasa de um lado, frango do outro) ou pré-aqueça o forno a 200°C.
+                            </li>
+                            <li>
+                                <strong>Assar:</strong> Coloque o frango na grelha sobre o calor indireto, com a pele para cima (ou em uma assadeira no forno). Asse por cerca de 45 a 60 minutos.
+                            </li>
+                            <li>
+                                <strong>Dourar a Pele:</strong> Nos últimos 10-15 minutes, se estiver na churrasqueira, mova o frango para o calor direto (cuidado para não queimar a pele) ou aumente a temperatura do forno (ou use a função grill) para deixar a pele bem crocante e dourada. O frango está pronto quando um termômetro inserido na parte mais grossa da coxa (sem tocar no osso) atingir 75-80°C, ou quando os sucos saírem claros ao perfurar a coxa.
+                            </li>
+                            <li>
+                                <strong>Descansar e Servir:</strong> Retire o frango da churrasqueira/forno e deixe descansar por 10 minutos antes de cortar. Isso ajuda a manter a suculência. Sirva em pedaços.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-200"> <h3 class="text-xl font-semibold text-amber-700 mb-3">Dicas do Churrasqueiro</h3>
+                     <ul class="list-disc list-inside text-gray-700 space-y-2">
+                         <li>Usar uma tesoura de cozinha torna o processo de cortar a coluna muito mais fácil e seguro.</li>
+                         <li>Secar bem o frango antes de temperar ajuda a pele a ficar mais crocante.</li>
+                         <li>Colocar a marinada por baixo da pele garante que o sabor penetre na carne.</li>
+                         <li>Monitore a temperatura interna com um termômetro para garantir que o frango esteja cozido por completo, mas ainda suculento.</li>
+                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidade" class="bg-gray-200 py-16">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Frango Suculento na Grelha?</h2>
+                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Aprenda mais técnicas e receitas para variar seu churrasco. Inscreva-se!</p>
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Inscreva-se na Newsletter</h3>
+                    <form action="#" method="POST">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
+                    </form>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> ChurrascoMania. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Feito com <span class="text-red-500">&hearts;</span> para amantes de churrasco.</p>
+             <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { if (!link.target || link.target !== '_blank') { mobileMenu.classList.add('hidden'); } }); });
+    </script>
+
+</body>
+</html>

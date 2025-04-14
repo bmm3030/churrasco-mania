@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChurrascoMania - Dicas, Receitas e Comunidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://placehold.co/32x32/E85D04/FFFFFF?text=CM" type="image/png">
+    <style>
+        /* Define a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para o efeito de hover nos cards */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Transição suave */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+       /* Classe para o fundo do Hero Section */
+       .hero-background {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.215), rgba(0, 0, 0, 0.5)), /* Sobreposição escura */
+                              url('assets/images/banner_churrascomania.jpg'); /* SUBSTITUA PELA SUA IMAGEM */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" title="Página Inicial ChurrascoMania">
+                <img src="assets/images/logo.png" alt="Logo ChurrascoMania" class="h-40 w-auto">
+            </a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="receitas/index.html" class="text-gray-600 hover:text-orange-600">Receitas</a>
+                <a href="tecnicas/index.html" class="text-gray-600 hover:text-orange-600">Técnicas</a>
+                <a href="noticias/index.html" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="equipamentos/index.html" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="index.html#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
+                <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    Calculadora
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
+            <a href="receitas/index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Receitas</a>
+            <a href="tecnicas/index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
+            <a href="noticias/index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+            <a href="equipamentos/index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+            <a href="index.html#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
+            <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
+                Calculadora
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section  class="hero-background text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">A Arte e o Sabor do Churrasco</h1>
+                <p class="text-lg md:text-xl mb-8">Sua comunidade online com as melhores dicas, receitas e técnicas para o churrasco perfeito.</p>
+                <a href="#destaques" class="bg-white text-orange-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 ease-in-out">
+                    Explore as Dicas
+                </a>
+            </div>
+        </section>
+
+        <section id="destaques" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-10">Em Destaque</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="assets/images/picanha_recheada.jpg" alt="[Imagem de Picanha na Grelha]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-orange-600 font-semibold">Receita</span>
+                            <h3 class="text-xl font-bold my-2">Picanha Invertida Recheada</h3>
+                            <p class="text-gray-600 text-sm mb-4">Se surpreenda com essa variação deliciosa da picanha tradicional...</p>
+                            <a href="receitas/picanha-invertida-recheada.html" class="text-orange-500 hover:text-orange-700 font-semibold">Leia mais &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="assets/images/controle_brasa.jpg" alt="[Imagem de Brasa de Carvão]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-blue-600 font-semibold">Técnica</span>
+                            <h3 class="text-xl font-bold my-2">Dominando o Fogo: Tipos de Brasa e Temperaturas</h3>
+                            <p class="text-gray-600 text-sm mb-4">Entenda como controlar a brasa para diferentes tipos de carne e assados.</p>
+                            <a href="tecnicas/controle-temperatura-brasa" class="text-blue-500 hover:text-blue-700 font-semibold">Leia mais &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <img src="assets/images/evento_churrasco_bh.jpg" alt="[Imagem de Acompanhamentos para Churrasco]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-green-600 font-semibold">Notícias</span>
+                            <h3 class="text-xl font-bold my-2">Confira os próximos eventos de Churrasco</h3>
+                            <p class="text-gray-600 text-sm mb-4">Fuego Festival BH 2025.</p>
+                            <a href="noticias/fuegos-festival-bh-2025" class="text-green-500 hover:text-green-700 font-semibold">Leia mais &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="bg-gray-200 py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-10">Explore por Categoria</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <a href="receitas/index.html" class="block bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-50 transition duration-300 ease-in-out">
+                        <img src="assets/images/carnes_churrasco.svg" alt="[Ícone de Receitas]" class="mx-auto mb-4 w-16 h-16">
+                        <h3 class="text-xl font-semibold text-gray-800">Receitas</h3>
+                        <p class="text-gray-500 text-sm mt-1">Do clássico ao gourmet.</p>
+                    </a>
+                    <a href="tecnicas/index.html" class="block bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:bg-blue-50 transition duration-300 ease-in-out">
+                         <img src="assets/images/tecnicas_churrasco.svg" alt="[Ícone de Técnicas]" class="mx-auto mb-4 w-16 h-16">
+                        <h3 class="text-xl font-semibold text-gray-800">Técnicas</h3>
+                        <p class="text-gray-500 text-sm mt-1">Segredos dos mestres.</p>
+                    </a>
+                    <a href="noticias/index.html" class="block bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:bg-yellow-50 transition duration-300 ease-in-out">
+                         <img src="assets/images/noticias_churrasco.svg" alt="[Ícone de Notícias]" class="mx-auto mb-4 w-16 h-16">
+                        <h3 class="text-xl font-semibold text-gray-800">Notícias</h3>
+                        <p class="text-gray-500 text-sm mt-1">Eventos e novidades.</p>
+                    </a>
+                    <a href="equipamentos/index.html" class="block bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:bg-gray-50 transition duration-300 ease-in-out">
+                         <img src="assets/images/equipamentos_churrasco.svg" alt="[Ícone de Equipamentos]" class="mx-auto mb-4 w-16 h-16">
+                        <h3 class="text-xl font-semibold text-gray-800">Equipamentos</h3>
+                        <p class="text-gray-500 text-sm mt-1">Reviews e dicas.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidade" class="py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Junte-se à Comunidade ChurrascoMania!</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Siga-nos nas redes sociais, participe das discussões e receba dicas exclusivas diretamente no seu e-mail.</p>
+
+                <div class="flex justify-center space-x-6 mb-10">
+                    <a href="#" target="_blank" class="text-orange-600 hover:text-orange-800">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.495 2.525c.636-.247 1.363-.416 2.427-.465C8.94 2.013 9.284 2 11.715 2h.6zm-1.78 4.913a1.423 1.423 0 10-2.846 0 1.423 1.423 0 002.846 0zm4.969 1.813a5.002 5.002 0 11-10 0 5.002 5.002 0 0110 0zm2.29 1.813a1.356 1.356 0 100-2.712 1.356 1.356 0 000 2.712z" clip-rule="evenodd" /></svg>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                    <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Receba Dicas Exclusivas!</h3>
+                    <form action="#" method="POST"> <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+                                Inscrever-se
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> ChurrascoMania. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Feito com <span class="text-red-500">&hearts;</span> para amantes de churrasco.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para o menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Script para atualizar o ano no rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Opcional: Fechar menu mobile ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Apenas fecha se não for um link externo (que abre em nova aba)
+                if (!link.target || link.target !== '_blank') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Opcional: Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Verifica se o link é apenas '#' ou se tem um alvo válido
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        // Calcula a posição do elemento alvo ajustando pela altura do cabeçalho fixo
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+
+                        // Fecha o menu mobile se estiver aberto após clicar no link
+                        if (!mobileMenu.classList.contains('hidden')) {
+                           mobileMenu.classList.add('hidden');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
