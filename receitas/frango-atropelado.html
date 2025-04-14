@@ -20,14 +20,15 @@
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" title="Página Inicial ChurrascoMania">
+            <a href="../" title="Página Inicial ChurrascoMania">
                 <img src="../assets/images/logo.png" alt="Logo ChurrascoMania" class="h-40 w-auto">
             </a>
 
             <div class="hidden md:flex space-x-6 items-center">
-                <a href="receitas.html" class="text-orange-600 font-semibold border-b-2 border-orange-600">Receitas</a> <a href="tecnicas.html" class="text-gray-600 hover:text-orange-600">Técnicas</a>
-                <a href="noticias.html" class="text-gray-600 hover:text-orange-600">Notícias</a>
-                <a href="equipamentos.html" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
+                <a href="index.html" class="text-orange-600 font-semibold border-b-2 border-orange-600">Receitas</a>
+                <a href="../tecnicas/" class="text-gray-600 hover:text-orange-600">Técnicas</a>
+                <a href="../noticias/" class="text-gray-600 hover:text-orange-600">Notícias</a>
+                <a href="../equipamentos/" class="text-gray-600 hover:text-orange-600">Equipamentos</a>
                 <a href="#comunidade" class="text-gray-600 hover:text-orange-600">Comunidade</a>
                 <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
                     Calculadora
@@ -42,16 +43,18 @@
         </nav>
 
         <div id="mobile-menu" class="hidden md:hidden bg-white py-3">
-            <a href="index.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
-            <a href="receitas.html" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Receitas</a> <a href="tecnicas.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
-            <a href="noticias.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
-            <a href="equipamentos.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+            <a href="../" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Home</a>
+            <a href="index.html" class="block px-6 py-2 text-orange-600 bg-orange-50 font-semibold">Receitas</a> <a href="tecnicas.html" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
+            <a href="../noticias/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Notícias</a>
+            <a href="../equipamentos/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Equipamentos</a>
+            <a href="../tecnicas/" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Técnicas</a>
             <a href="#comunidade" class="block px-6 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600">Comunidade</a>
             <a href="https://calculadoradechurrasco.com.br/" target="_blank" class="block px-6 py-2 bg-orange-500 text-white text-center font-semibold rounded-lg mx-4 my-2 hover:bg-orange-600 transition duration-300 ease-in-out">
                 Calculadora
             </a>
         </div>
     </header>
+
 
     <main>
         <section class="bg-amber-500 text-white py-8"> <div class="container mx-auto px-6">
@@ -149,22 +152,19 @@
         </section>
 
         <section id="comunidade" class="bg-gray-200 py-16">
-             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl font-bold mb-4">Frango Suculento na Grelha?</h2>
-                 <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Aprenda mais técnicas e receitas para variar seu churrasco. Inscreva-se!</p>
-                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">Inscreva-se na Newsletter</h3>
-                    <form action="#" method="POST">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <input type="email" name="email" placeholder="Seu melhor e-mail" required class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
-                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out">
-                                Inscrever-se
-                            </button>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-3">Respeitamos sua privacidade. Sem spam.</p>
-                    </form>
-                </div>
-             </div>
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Junte-se à Comunidade ChurrascoMania!</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Siga-nos nas redes sociais e participe das discussões.</p>
+
+                <div class="flex justify-center space-x-6 mb-10">
+                    <a href="https://www.instagram.com/churrascomania.shop" target="_blank" class="text-orange-600 hover:text-orange-800" aria-label="Instagram ChurrascoMania">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.644-.069-4.849 0-3.204.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                    </div>
+            </div>
         </section>
     </main>
 
